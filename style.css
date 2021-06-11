@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    padding: 0;
+    margin: 0;
+
+    --blue: #0065FC;
+    --lighter-blue: #DEEBFF;
+    --gray: #F2F2F2;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    max-width: 1440px;
+    margin: auto;
+    font-family: "Raleway", sans-serif;
+}
+.main-block {
+    margin-left: 30px;
+}
+
+/******* HEADER *******/
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;   
+}
+
+.logo {
+    margin-top: 25px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    margin-left: 40vw;
+}
+
+nav ul li {
+    padding: 25px;
+    font-weight: 500;
+}
+
+.hosting-link {
+    color: var(--blue);
+    border-top: 3px solid var(--blue);
+}
+.activities-link {
+    border-top: 3px solid white;
+}
+.activities-link:hover {
+    border-top: 3px solid var(--blue);
+    color: var(--blue);
+}
+.sign-up {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+
+/******SEARCH SECTION **********/
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+.marker-container{
+    width: 4rem;
+    height: 3.5rem;
+    background-color: var(--gray);
+    border-radius: 15px 0 0 15px;   
+    text-align: center;
+}
+
+.text-input {
+    height: 3.9em;
+    padding-left: 10px;
+    border: 1px solid var(--gray);
+}
+    .text-input::placeholder {
+        font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #000;
+    }
+
+.search-btn {
+    width: 8em;
+    height: 3.7em;
+    margin-left: 0px;
+    color: #fff;
+    background-color: #0065fc;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    margin-top: 35px;
+}
+
+.filter-title {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.eco:hover, .family:hover, .romantic:hover, .pet:hover {
+    transform: scale(1.02);
+}
+.fa-money-bill-wave {
+    padding: 14px 12px 14px 12px;
+    color: var(--blue);
+    background-color: var(--lighter-blue);
+    border-radius: 40px;
+    margin-right: -50px;
+    position: absolute;
+}
+.eco-btn {
+    width: 150px;
+    font-weight: 600;
+    padding: 12px 12px 12px 40px;
+    background-color: #fff;
+    border: 3px solid var(--gray);
+    border-radius: 30px;
+}
+    .eco-btn:hover {
+        background-color: var(--gray);
+    }
+span {
+    font-weight: 600;
+    padding: 12px 12px 12px 40px;
+    border: 3px solid var(--gray);
+    border-radius: 30px;
+}
+.info {
+    display: flex;
+}
+.info-btn {
+    color: var(--blue);
+    background-color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+    position: absolute;
+}
+
+.info-text {
+    margin-top: 12px;
+    margin-left: 25px;
+}
+/******* HOST SECTION *******/
+
+.marseille-host {
+    background-color: var(--gray);
+    margin-top: 25px;
+    margin-right: 30px;
+    padding-left: 25px;
+    border-radius: 15px;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15rem;
+    grid-gap: 12px;
+
+}
+.fa-star[data-active="true"] {
+    color: var(--blue);
+}
+.fa-star[data-active="false"] {
+    color: var(--gray);
+}
+.host {
+    display: flex;
+    flex-direction: row;
+}
+
+.host-card {
+    background-color: #fff;
+    max-width: 14rem;
+    height: 12rem;
+    margin: 12px;
+    padding: 3px;
+    border-radius: 18px;
+}
+    .host-card:hover {
+       transform: scale(1.05);
+    }
+.host-img {
+    width: 13rem;
+    height: 7rem;
+    
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-left: 8px;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -8px;
+    margin-left: 8px;
+}
+
+.popular-img {
+    width: 5rem;
+}
+
+
+
+/******** FOOTER ********/
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--gray);   
+}
+
+.a-propos, .hebergement, .help {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
+.footer-list li {
+    list-style: none;
+}
+
+
+
+/****** RESPONSIVE ******/
+
+@media only screen and (max-width: 1440px) {
+    body {
+      width: 100%;
+    }
+  }
