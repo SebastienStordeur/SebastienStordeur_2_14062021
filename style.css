@@ -190,12 +190,11 @@ form {
 /******* HOST SECTION *******/
 
 .marseille-host {
-    width: 50rem;
+    width: 65%;
     height: 40rem;
     background-color: var(--gray);
     margin-top: 25px;
     margin-right: 30px;
-    padding-left: 25px;
     border-radius: 15px;
 }
 .card-container {
@@ -203,7 +202,7 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15rem;
-    grid-gap: 12px;
+    grid-gap: 5px;
 
 }
 
@@ -214,11 +213,12 @@ form {
 
 .host-card {
     background-color: #fff;
-    max-width: 14rem;
+    max-width: 15rem;
     height: 12rem;
     margin: 12px;
     padding: 3px;
     border-radius: 18px;
+    box-shadow: 0 0 9px #000000e2;
     cursor: pointer;
 }
     .host-card:hover {
@@ -226,7 +226,7 @@ form {
     }
     
 .host-img {
-    width: 14rem;
+    width: 15rem;
     height: 6rem;   
     border-radius: 16px 16px 0 0;
     object-fit: cover;
@@ -257,8 +257,7 @@ p {
     width: 20rem;
     height: 40rem;
     margin-top: 25px;
-    border-radius: 15px;
-    
+    border-radius: 15px;   
 }
 .popular-title {
     display: flex;
@@ -266,7 +265,7 @@ p {
     margin-left: 12px;
 }
 .fa-chart-line {
-    margin-top: 30px;
+    margin-top: 43px;
     margin-left: 40px;
 }
 
@@ -275,6 +274,7 @@ p {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    padding: 20px;
 }
 
 .popular-card {
@@ -283,24 +283,19 @@ p {
     margin-top: 25px;
     background-color: #fff;
     border-radius: 15px;
+    box-shadow: 0 0 4px #000;
     display: flex;
     flex-direction: row;
     overflow: hidden;
     cursor: pointer;
 }
 
-/*.popular-img-container {
-    height: 7rem;
-    width: 7rem;
-    margin: 3px;
-    border-radius: 16px 0 0 16px;
-    overflow: hidden;
-}*/
 .popular-img {
     margin: 3px;
     width: 7.5rem;
     height: 7.5rem;
     object-fit: cover;
+    border-radius: 15px;
     overflow: hidden;
 }
 
@@ -312,53 +307,90 @@ h2 {
 /******** Activity section *********/
 
 .activity-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem;
-    grid-column-gap: 20px;
-
+    display: flex;
+    flex-direction: row;
 }
 .activity-card {
     background-color: #fff;
     max-width: 30rem;
     border-radius: 15px;
-    box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 10px #000;
     overflow: hidden;
+    cursor: pointer;
+}
+    .activity-card:hover {
+        transform: scale(1.02);
+    }
+.activity1 {
+    width: 20rem;
+    height: 33rem;
+}
+.column2, .column4{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
-.activity1 {
-    grid-row: 1/7;
-}
-.activity2 { 
-    grid-row: 1/4;
+.activity2 {
+    width: 20rem;
+    height: 18rem;
 }
 .activity3 {
-    grid-row: 5/7;
+    margin-top: 3rem;
+    width: 20rem;
+    height: 12rem;
 }
 .activity4 {
-    grid-row: 1/7;
+    width: 20rem;
+    height: 33rem;
 }
 .activity5 {
-    grid-row: 1/3;
+    width: 20rem;
+    height: 14rem;
+    
 }
 .activity6 {
-    grid-row: 4/7;
+    width: 20rem;
+    height: 16rem;
+    margin-top: 3rem;
 }
-.activity-location {
+.activity-card-title {
+    width: 20rem;
     height: 3rem;
+    padding: 10px 20px;
+    background-color: #fff;
+    
 }
-.activity1 img {
-    max-height: 90%;
+
+.img1 {
+    width: 100%;
+    height: 30rem;
     object-fit: cover;
 }
-.activity2 img {
-    max-height: 85%;
-    width: 100%;
+.img2 {
+    width: 20rem;
+    height: 15rem;
     object-fit: cover;
 }
-.activity3 img {
-    max-height: 55%;
+.img3 {
     width: 100%;
+    height: 9rem;
+    object-fit: cover;
+}
+.img4 {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+.img5 {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+}
+.img6 {
+    width: 100%;
+    height: 13rem;
     object-fit: cover;
 }
 /******** FOOTER ********/
@@ -379,7 +411,7 @@ footer {
     flex-direction: column;
     line-height: 25px;
     margin-top: 30px;
-    margin-right: 10rem;
+    margin-right: 15rem;
 }
 
 footer a:hover {
