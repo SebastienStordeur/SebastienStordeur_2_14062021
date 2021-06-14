@@ -3,7 +3,7 @@
 :root {
     padding: 0;
     margin: 0;
-
+    box-sizing: border-box;
     --blue: #0065FC;
     --lighter-blue: #DEEBFF;
     --gray: #F2F2F2;
@@ -12,6 +12,9 @@ a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+li {
+    list-style: none;
 }
 body {
     max-width: 1440px;
@@ -64,7 +67,9 @@ nav ul li {
 
 
 /******SEARCH SECTION **********/
-
+.search-section {
+    margin-top: 30px;
+}
 form {
     display: flex;
     flex-direction: row;
@@ -75,7 +80,9 @@ form {
     height: 3.5rem;
     background-color: var(--gray);
     border-radius: 15px 0 0 15px;   
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-input {
@@ -106,6 +113,7 @@ form {
 
 .filters {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 35px;
 }
 
@@ -116,33 +124,53 @@ form {
 .eco:hover, .family:hover, .romantic:hover, .pet:hover {
     transform: scale(1.02);
 }
-.fa-money-bill-wave {
-    padding: 14px 12px 14px 12px;
+.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog {
     color: var(--blue);
+}
+
+.icon-wrapper {
     background-color: var(--lighter-blue);
-    border-radius: 40px;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: -50px;
     position: absolute;
 }
-.eco-btn {
-    width: 150px;
+
+.filter-btn  {
+    height: 3rem;
     font-weight: 600;
-    padding: 12px 12px 12px 40px;
+    padding: 12px 5px 12px 40px;
     background-color: #fff;
     border: 3px solid var(--gray);
     border-radius: 30px;
+    cursor: pointer;
+    margin-right: 25px;
 }
-    .eco-btn:hover {
-        background-color: var(--gray);
-    }
-span {
-    font-weight: 600;
-    padding: 12px 12px 12px 40px;
-    border: 3px solid var(--gray);
-    border-radius: 30px;
+.eco-btn {
+    width: 10rem;
 }
+
+.family-btn {
+    width: 8rem;
+}
+.romantic-btn {
+    width: 9rem;
+}
+.pet-btn {
+    width: 12rem;
+}
+.eco-btn:hover, .family-btn:hover, .romantic-btn:hover, .pet-btn:hover {
+    background-color: var(--gray);
+}
+
 .info {
+    margin-top: 15px;
     display: flex;
+    flex-direction: row;
 }
 .info-btn {
     color: var(--blue);
@@ -162,6 +190,8 @@ span {
 /******* HOST SECTION *******/
 
 .marseille-host {
+    width: 50rem;
+    height: 40rem;
     background-color: var(--gray);
     margin-top: 25px;
     margin-right: 30px;
@@ -169,18 +199,14 @@ span {
     border-radius: 15px;
 }
 .card-container {
+    margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15rem;
     grid-gap: 12px;
 
 }
-.fa-star[data-active="true"] {
-    color: var(--blue);
-}
-.fa-star[data-active="false"] {
-    color: var(--gray);
-}
+
 .host {
     display: flex;
     flex-direction: row;
@@ -193,15 +219,17 @@ span {
     margin: 12px;
     padding: 3px;
     border-radius: 18px;
+    cursor: pointer;
 }
     .host-card:hover {
        transform: scale(1.05);
     }
-.host-img {
-    width: 13rem;
-    height: 7rem;
     
+.host-img {
+    width: 14rem;
+    height: 6rem;   
     border-radius: 16px 16px 0 0;
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -209,7 +237,6 @@ h3 {
     font-size: 15px;
     font-weight: 700;
     margin-top: 0;
-    margin-left: 8px;
 }
 
 p {
@@ -218,35 +245,146 @@ p {
     margin-top: -8px;
     margin-left: 8px;
 }
+.fa-star[data-active="true"] {
+    color: var(--blue);
+}
+.fa-star[data-active="false"] {
+    color: lightgray;
+}
 
+.popular {
+    background-color: var(--gray);
+    width: 20rem;
+    height: 40rem;
+    margin-top: 25px;
+    border-radius: 15px;
+    
+}
+.popular-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+}
+.fa-chart-line {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.popular-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.popular-card {
+    width: 17rem;
+    height: 8rem;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*.popular-img-container {
+    height: 7rem;
+    width: 7rem;
+    margin: 3px;
+    border-radius: 16px 0 0 16px;
+    overflow: hidden;
+}*/
 .popular-img {
-    width: 5rem;
+    margin: 3px;
+    width: 7.5rem;
+    height: 7.5rem;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+h2 {
+    margin-top: 35px;
 }
 
 
+/******** Activity section *********/
 
+.activity-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem;
+    grid-column-gap: 20px;
+
+}
+.activity-card {
+    background-color: #fff;
+    max-width: 30rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #000;
+    overflow: hidden;
+}
+
+.activity1 {
+    grid-row: 1/7;
+}
+.activity2 { 
+    grid-row: 1/4;
+}
+.activity3 {
+    grid-row: 5/7;
+}
+.activity4 {
+    grid-row: 1/7;
+}
+.activity5 {
+    grid-row: 1/3;
+}
+.activity6 {
+    grid-row: 4/7;
+}
+.activity-location {
+    height: 3rem;
+}
+.activity1 img {
+    max-height: 90%;
+    object-fit: cover;
+}
+.activity2 img {
+    max-height: 85%;
+    width: 100%;
+    object-fit: cover;
+}
+.activity3 img {
+    max-height: 55%;
+    width: 100%;
+    object-fit: cover;
+}
 /******** FOOTER ********/
 
 footer {
+    margin-top: 60px;
+    padding-left: 3rem;
+    height: 12rem;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    background-color: var(--gray);   
+    background-color: var(--gray);
+    font-weight: 500;
+    font-size: 14px;
 }
 
-.a-propos, .hebergement, .help {
+.footer-column {
     display: flex;
     flex-direction: column;
+    line-height: 25px;
+    margin-top: 30px;
+    margin-right: 10rem;
 }
 
-.footer-list {
-    display: flex;
-    flex-direction: column;
+footer a:hover {
+    text-decoration: underline;
 }
-.footer-list li {
-    list-style: none;
-}
-
-
 
 /****** RESPONSIVE ******/
 
