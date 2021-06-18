@@ -16,8 +16,7 @@ a {
 body {
     max-width: 1440px;
     margin: auto;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+
     font-family: "Raleway", sans-serif;
 }
 @media (max-width: 600px) {
@@ -32,6 +31,7 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
+    margin-left: 1.5rem;
 }
 .nav-links {
     grid-column: 3/4;
@@ -59,44 +59,50 @@ header {
 }
 @media (max-width: 600px) {
     header {
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 4rem 4rem;
+        margin-left: 0;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+        "logo . sign-up"
+        "nav-links nav-links nav-links";
     }
     .logo {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        margin-left: 1rem;
+        grid-area: logo;
+        order: 0;
+    }
+    .sign-up {
+        margin-right: 1.5rem;
+        grid-area: sign-up;
+        order: 1;
+    }
+    .nav-links {
+        text-align: center;
+        grid-area: nav-links;
+        order: 2;
     }
     .hosting-link {
+        width: 50%;
+        
         border-top: none;
         border-bottom: 3px solid var(--blue);
-    
     }
     .activity-link {
+        width: 50%;
         border-bottom: 3px solid var(--gray);
+        border-top: none;
     }
     .activity-link:hover {
         border-top: none;
         border-bottom: 3px solid var(--blue);
     }
-    .sign-up {
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-    nav:nth-child(1) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        width: 150%;
-    }
-    nav:nth-child(2) {
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
+
 }
 
 /***************************** SEARCH SECTION ****************************/
 
 .search-section {
-    margin-top: 2rem;  
+    margin-top: 2rem;
+    margin-left: 1.5rem;
 }
 form {
     display: flex;
@@ -114,6 +120,7 @@ form {
 }
 .search-input {
     height: 3.9em;
+    width: 15em;
     padding-left: 10px;
     border: 1px solid var(--gray);
 }
@@ -141,7 +148,7 @@ form {
 .filters {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 35px;
+    margin-top: 2rem;
 }
 .filter-title {
     margin-top: 15px;
@@ -224,6 +231,7 @@ form {
     }
     .search-btn {
         width: 3.7rem;
+        margin-left: -1rem;
         border-radius: 1rem;
     }
     .filter-title {
@@ -248,7 +256,7 @@ form {
 }
 .host-title {
     grid-column: 1/-1;
-    margin-left: 2%;
+    margin-left: 1%;
 }
 .host-card {
     display: flex;
@@ -339,6 +347,7 @@ form {
     }
     .show-more {
         grid-row: 8/9;
+        margin-left: 1.5rem;
     }
 }
 .popular-panel {
@@ -377,7 +386,8 @@ form {
     align-items: center;
     position: relative;
     min-height: 100%;
-    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
     border: 4px solid #fff;
     overflow: hidden;
 }
@@ -425,11 +435,16 @@ form {
         width: 100%;
     }
 }
+@media (max-width: 600px) {
+    .popular-host-card-img-wrapper {
+        min-width: 40%;
+    }
+}
 
 /**************************ACTIVITY SECTION *************************/
 
 .activity-section {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: grid;
     column-gap: 2rem;    
 }
@@ -504,8 +519,12 @@ form {
 }
 @media only screen and (max-width: 600px) {
     .activity-section {
+        margin-top: 0;
         grid-template-columns: 1fr;
         grid-template-rows: auto 13rem 13rem 13rem 13rem 13rem 13rem;
+    }
+    .activity-title {
+        margin-bottom: -1rem;
     }
 }
 
