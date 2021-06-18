@@ -10,23 +10,16 @@
 </head>
 <body>
     <header class="header">
-        <div class="nav-bar">
-            <div class="logo">
-                <img 
-                src="src/img/Reservia.svg" 
-                alt="Logo Reservia" 
-                />
-            </div>
-            <div class="nav-links">
-                <nav>
-                    <ul>
-                        <li class="hosting-link"><a href="#host">Hébergements</a></li>
-                        <li class="activities-link"><a href="#activities">Activités</a></li>
-                    </ul>
-                    <a href="#" class="sign-up" >S'inscrire</a>
-                </nav>
-            </div>
-        </div>
+         <img 
+            src="src/img/Reservia.svg" 
+            alt="Logo Reservia"
+            class="logo"
+        />
+        <nav class="nav-links">                 
+            <a href="#host" class="hosting-link">Hébergements</a>
+            <a href="#activity" class="activity-link">Activités</a>
+        </nav>           
+            <a href="#" class="sign-up" >S'inscrire</a>                
     </header>
 
     <section class="search-section">
@@ -44,7 +37,6 @@
                 </button>               
             </form>
         </div>
-
         <div class="filters">
             <h3 class="filter-title">Filtres</h3>
             <div class="eco">
@@ -72,22 +64,17 @@
                 <button class="pet-btn filter-btn">Animaux autorisés</button>
             </div>
         </div>
-
         <div class="info">
             <button class="info-btn">
                 <i class="fas fa-info"></i>
            </button>
             <p class="info-text">Plus de 500 logements sont disponibles dans cette ville</p>             
         </div>
-
     </section>
 
     <section class="host-section" id="host">
-
         <div class="host-panel">
-            <h2 class="host-title">Hébergements à Marseille</h2>
-
-            
+            <h2 class="host-title">Hébergements à Marseille</h2>           
                 <div class="host-card host-card1">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -97,8 +84,8 @@
                         />
                     </div>
                     <div class="host-card-description">
-                        <h3>Auberge de la canebière</h3>
-                        <p>Nuit à partir de <strong>25€</strong></p>
+                        <h3 class="location-title">Auberge de la canebière</h3>
+                        <p class="host-price">Nuit à partir de <strong>25€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -108,7 +95,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="host-card host-card2">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -118,8 +104,8 @@
                         />
                     </div>
                     <div class="host-card-description">
-                        <h3>Hôtel du port</h3>
-                        <p>Nuit à partir de <strong>52€</strong></p>
+                        <h3 class="location-title">Hôtel du port</h3>
+                        <p class="host-price">Nuit à partir de <strong>52€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -129,7 +115,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="host-card host-card3">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -138,8 +123,8 @@
                         class="host-img"/>
                     </div>
                     <div class="host-card-description">
-                        <h3>Hôtel Les mouettes</h3>
-                        <p>Nuit à partir de <strong>76€</strong></p>
+                        <h3 class="location-title">Hôtel Les mouettes</h3>
+                        <p class="host-price">Nuit à partir de <strong>76€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -149,7 +134,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="host-card host-card4">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -159,8 +143,8 @@
                         />
                     </div>
                     <div class="host-card-description">
-                        <h3>Hôtel de la mer</h3>
-                        <p>Nuit à partir de <strong>46€</strong></p>
+                        <h3 class="location-title">Hôtel de la mer</h3>
+                        <p class="host-price">Nuit à partir de <strong>46€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -170,7 +154,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="host-card host-card5">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -180,8 +163,8 @@
                         />
                     </div>
                     <div class="host-card-description">
-                        <h3>Auberge Le Panier</h3>
-                        <p>Nuit à partir de <strong>23€</strong></p>
+                        <h3 class="location-title">Auberge Le Panier</h3>
+                        <p class="host-price">Nuit à partir de <strong>23€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -191,7 +174,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="host-card host-card6">
                     <div class="host-card-img-wrapper">
                         <img 
@@ -201,8 +183,8 @@
                         />
                     </div>                   
                     <div class="host-card-description">
-                        <h3>Hôtel chez Amina</h3>
-                        <p>Nuit à partir de <strong>96€</strong></p>
+                        <h3 class="location-title">Hôtel chez Amina</h3>
+                        <p class="host-price">Nuit à partir de <strong>96€</strong></p>
                         <div class="star-wrapper">
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i> 
@@ -210,25 +192,16 @@
                             <i class="fas fa-star" data-active="true"></i> 
                             <i class="fas fa-star" data-active="true"></i>
                         </div>
-                    </div>
-                
-            </div>
+                    </div>               
+                </div>
             <p class="show-more"><a href="#">Afficher plus</a></p>
         </div>
-
-
-
-
-
-
 
         <div class="popular-panel">
             <div class="popular-panel-title">
                 <h2>Les plus populaires</h2>
                 <i class="fas fa-chart-line"></i>
-            </div>
-            
-            
+            </div>           
                 <div class="popular-host-card popular-card1">
                     <div class="popular-host-card-img-wrapper">
                         <img 
@@ -248,7 +221,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="popular-host-card popular-card2">
                     <div class="popular-host-card-img-wrapper">
                         <img 
@@ -268,7 +240,6 @@
                         </div>  
                     </div>
                 </div>
-
                 <div class="popular-host-card popular-card3">
                     <div class="popular-host-card-img-container">
                         <img 
@@ -289,7 +260,6 @@
                     </div>
                 </div>
     </section>
-
     <section class="activity-section" id="activity">
         <h2 class="activity-title">Activités à Marseille</h2>                  
                 <div class="activity-card activity1">
