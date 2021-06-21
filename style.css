@@ -14,10 +14,11 @@ a {
     cursor: pointer;
 }
 body {
+    font-family: "Raleway", sans-serif;
+}
+#main {
     max-width: 1440px;
     margin: auto;
-
-    font-family: "Raleway", sans-serif;
 }
 @media (max-width: 600px) {
     body {
@@ -31,6 +32,10 @@ header {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
+    max-width: 1440px;
+    margin:auto;
+}
+.logo {
     margin-left: 1.5rem;
 }
 .nav-links {
@@ -467,6 +472,8 @@ form {
         transform: scale(1.02);
     }
 .activity-card-title {
+    display: flex;
+    align-items: center;
     height: 3rem;
     margin-left: 1rem;
 }
@@ -534,12 +541,16 @@ footer {
     margin-top: 3rem;
     padding-left: 2rem;
     padding-bottom: 2rem;
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
     background-color: var(--gray);
     font-weight: 500;
     font-size: 14px;
+}
+.about-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12rem;
 }
 .footer-column {
     display: flex;
@@ -554,6 +565,14 @@ footer a:hover {
 .footer-title {
     font-size: 1rem;
     font-weight: bold;
+}
+.help-column {
+    margin-left: -12rem;
+}
+@media only screen and (max-width: 1440px) {
+    .about-column {
+        margin-left: 0.5rem;
+    }
 }
 @media only screen and (max-width: 800px) {
     footer {
