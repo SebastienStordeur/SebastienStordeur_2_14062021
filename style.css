@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     --blue: #0065FC;
     --lighter-blue: #DEEBFF;
@@ -14,6 +12,8 @@ a {
     cursor: pointer;
 }
 body {
+    padding: 0;
+    margin: 0;
     font-family: "Raleway", sans-serif;
 }
 #main {
@@ -29,20 +29,23 @@ body {
 /***************************** HEADER*************************************/
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     max-width: 1440px;
     margin:auto;
+    overflow: hidden;
 }
 .logo {
     margin-left: 1.5rem;
 }
 .nav-links {
-    grid-column: 3/4;
+    display: flex;
+    flex-direction: row;  
+    align-items: center baseline;
+}
+.nav {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 .hosting-link {
     color: var(--blue);
@@ -61,33 +64,33 @@ header {
     color: var(--blue);
     font-weight: 600;
     margin-left: 1.5rem;
+    margin-top: 1.7rem;
 }
 @media (max-width: 600px) {
     header {
         margin-left: 0;
-        grid-template-columns: auto 1fr auto;
-        grid-template-areas: 
-        "logo . sign-up"
-        "nav-links nav-links nav-links";
     }
     .logo {
         margin-left: 1rem;
-        grid-area: logo;
-        order: 0;
     }
     .sign-up {
-        margin-right: 1.5rem;
-        grid-area: sign-up;
-        order: 1;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: 5%;
+        order: 0;
     }
     .nav-links {
+        position: absolute;
+        flex-direction: column;
         text-align: center;
-        grid-area: nav-links;
-        order: 2;
+        width: 100%;
+    }
+    .nav {
+        order: 1;
     }
     .hosting-link {
         width: 50%;
-        
+        grid-area: nav-links;
         border-top: none;
         border-bottom: 3px solid var(--blue);
     }
@@ -100,9 +103,12 @@ header {
         border-top: none;
         border-bottom: 3px solid var(--blue);
     }
-
 }
-
+@media (max-width: 400px) {
+    .sign-up {
+        margin-left: 77%;
+    }
+}
 /***************************** SEARCH SECTION ****************************/
 
 .search-section {
@@ -129,7 +135,7 @@ form {
     padding-left: 10px;
     border: 1px solid var(--gray);
 }
-    .text-input::placeholder {
+    .search-input::placeholder {
         font-family: "Raleway", sans-serif;
         font-size: 1rem;
         font-weight: 700;
@@ -224,6 +230,7 @@ form {
 }
 @media (max-width: 600px) {
     .search-section {
+        margin-top: 6rem;
         margin-left: 1.5rem;
     }
 }
@@ -253,7 +260,7 @@ form {
 .host-panel {
     display: grid;
     grid-gap: 2rem;
-    width: 95%;
+    width: 97%;
     background-color: var(--gray);
     border-radius: 1rem;
     padding-left: 1rem;
@@ -267,7 +274,7 @@ form {
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
-    box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 8px 2px #000;
     overflow: hidden;
     cursor: pointer;
 }
@@ -298,6 +305,12 @@ form {
     grid-row: 4/5;
     font-weight: bold;
     margin-left: 5%;
+}
+@media (max-width: 1213px) {
+    .resize-title {
+        margin-top: 0px;
+        line-height: 16px;
+    }
 }
 @media (min-width: 1101px) {
     .host-panel {
@@ -331,10 +344,11 @@ form {
 }
 @media (max-width: 1100px) {
     .host-panel {
+        width: auto;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto 15rem 15rem 15rem auto;
         background-color: #fff;
-        margin: 0 1rem;
+        margin: 0;
     }
     .show-more {
         grid-row: 5/6;
@@ -345,10 +359,10 @@ form {
         grid-template-columns: 1fr;
         grid-template-rows: auto 15rem 15rem 15rem 15rem 15rem 15rem auto;
         margin: 0;
-        padding: 0.5rem;
+        padding: 0.6rem;
     }
     .host-title {
-        margin-left: 5%;
+        margin-left: 2%;
     }
     .show-more {
         grid-row: 8/9;
@@ -404,7 +418,7 @@ form {
     overflow: hidden;
 }
 .popular-host-card-description {
-    margin-left: 16px;
+    margin-left: 8px;
 }
 .popular-card-price {
     margin-top: -1rem;
@@ -542,21 +556,17 @@ footer {
     padding-left: 2rem;
     padding-bottom: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 1fr 1fr 1fr;
     background-color: var(--gray);
     font-weight: 500;
     font-size: 14px;
-}
-.about-column {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12rem;
 }
 .footer-column {
     display: flex;
     flex-direction: column;
     line-height: 25px;
     margin-top: 30px;
+    margin-left:7rem;
     box-sizing: border-box;
 }
 footer a:hover {
@@ -566,9 +576,6 @@ footer a:hover {
     font-size: 1rem;
     font-weight: bold;
 }
-.help-column {
-    margin-left: -12rem;
-}
 @media only screen and (max-width: 1440px) {
     .about-column {
         margin-left: 0.5rem;
@@ -577,10 +584,16 @@ footer a:hover {
 @media only screen and (max-width: 800px) {
     footer {
         grid-template-columns: repeat(2, 50%);
-    }    
+    }
+    .help-column {
+        margin-left: 0.5rem;
+    }
 }
 @media only screen and (max-width: 600px) {
     footer {
         grid-template-columns: 1fr;
+    }
+    .host-column {
+        margin-left: 0.5rem;
     }
 }
