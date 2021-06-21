@@ -308,7 +308,7 @@ form {
 }
 @media (max-width: 1213px) {
     .resize-title {
-        margin-top: 0px;
+        margin-top: 0;
         line-height: 16px;
     }
 }
@@ -349,6 +349,9 @@ form {
         grid-template-rows: auto 15rem 15rem 15rem auto;
         background-color: #fff;
         margin: 0;
+    }
+    .resize-title {
+        margin-top: 1rem;
     }
     .show-more {
         grid-row: 5/6;
