@@ -256,6 +256,7 @@ form {
 .host-section {
     display: flex;
     flex-direction: row;
+    padding-left: 1.5rem;
 }
 .host-panel {
     display: grid;
@@ -274,7 +275,7 @@ form {
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
-    box-shadow: 0 0 8px 2px #000;
+    box-shadow: 3px 3px 15px 2px #d9d9d9;
     overflow: hidden;
     cursor: pointer;
 }
@@ -394,7 +395,7 @@ form {
     margin: 0 1rem;
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 0 4px #000;
+    box-shadow: 3px 3px 15px 2px #d9d9d9;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -445,6 +446,7 @@ form {
 @media (max-width: 1100px) {
     .host-section {
         flex-direction: column-reverse;
+        padding-left: 0;
     }
     .popular-panel {
         margin: 2rem 0 2rem 0;
@@ -468,7 +470,8 @@ form {
 .activity-section {
     margin-top: 1.5rem;
     display: grid;
-    column-gap: 2rem;    
+    column-gap: 2rem;
+    padding-left: 1.5rem;
 }
 .activity-title {
     grid-column: 1/-1;
@@ -481,7 +484,7 @@ form {
     margin-left: 2.5%;
     background-color: #fff;
     border-radius: 1rem;
-    box-shadow: 0 0 10px #000000;
+    box-shadow: 3px 3px 15px 2px #d9d9d9;
     overflow: hidden;
     cursor: pointer;
 }
@@ -539,6 +542,7 @@ form {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto 12rem 12rem 12rem;
         row-gap: 2rem;
+        padding-left: 0;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -555,21 +559,26 @@ form {
 /*****************************FOOTER************************/
 
 footer {
-    margin-top: 3rem;
-    padding-left: 2rem;
+    margin-top: 3rem;   
     padding-bottom: 2rem;
-    display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr;
     background-color: var(--gray);
     font-weight: 500;
     font-size: 14px;
+}
+.footer-wrapper {
+    display: flex;
+    max-width: 100%;
+    width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
 }
 .footer-column {
     display: flex;
     flex-direction: column;
     line-height: 25px;
     margin-top: 30px;
-    margin-left:7rem;
+    width: 30%;
     box-sizing: border-box;
 }
 footer a:hover {
@@ -579,24 +588,12 @@ footer a:hover {
     font-size: 1rem;
     font-weight: bold;
 }
-@media only screen and (max-width: 1440px) {
-    .about-column {
-        margin-left: 0.5rem;
-    }
-}
+
 @media only screen and (max-width: 800px) {
-    footer {
-        grid-template-columns: repeat(2, 50%);
+    .footer-wrapper {
+        flex-direction: column;
     }
-    .help-column {
-        margin-left: 0.5rem;
-    }
-}
-@media only screen and (max-width: 600px) {
-    footer {
-        grid-template-columns: 1fr;
-    }
-    .host-column {
-        margin-left: 0.5rem;
+    .footer-column {
+        width: auto;
     }
 }
